@@ -30,3 +30,5 @@ plugins:
       - WEB
       - WEBEMBEDDED
       - TVHTML5_SIMPLY
+    oauth:
+      enabled: true
