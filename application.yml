@@ -32,4 +32,23 @@ plugins:
       - TVHTML5_SIMPLY
     oauth:
       enabled: true
-      refreshToken: "1//05WTnyBUg67K5CgYIARAAGAUSNwF-L9IrzPoCXRZRF0-d9tozyAZZw52hCchHS
+      refreshToken: '1//05WTnyBUg67K5CgYIARAAGAUSNwF-L9IrzPoCXRZRF0-d9tozyAZZw52hCchHSSTYhqgF0k3wEkrInoKo97sfCrUgiwjmpPOV3_c'
+    cipherServerUrl: "https://yt-cipher.kikkia.dev"
+  lavasrc:
+    providers:
+      - ytsearch:%QUERY%
+      - ytmsearch:%QUERY%
+      - spsearch:%QUERY%
+    sources:
+      spotify: true
+    spotify:
+      clientId: "cfbeced2bbdd4e869bf8bd8eb785c799"
+      clientSecret: "60aca10739d843fdb935785a04bfcb60"
+      countryCode: US
+      playlistLoadLimit: 6
+      albumLoadLimit: 6
+
+logging:
+  level:
+    root: INFO
+    lavalink: INFO
