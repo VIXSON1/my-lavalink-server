@@ -3,7 +3,7 @@ server:
 
 lavalink:
   server:
-    password: "youshallnotpass"
+    password: "crystalmusic123"
 
     sources:
       youtube: false
@@ -23,8 +23,11 @@ plugins:
 
     clients:
       - MUSIC
-      - WEB
-      - WEBEMBEDDED
+      - ANDROID_TESTSUITE
+      - TVHTML5EMBEDDED
 
     oauth:
       enabled: false
+
+    allowSearch: true
+    allowDirectVideoIds: true
