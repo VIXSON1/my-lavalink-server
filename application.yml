@@ -49,7 +49,7 @@ plugins:
 
     sources:
       spotify: true
-      applemusic: true
+      applemusic: false
       deezer: true
       yandexmusic: false
 
