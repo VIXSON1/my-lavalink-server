@@ -20,14 +20,12 @@ lavalink:
 plugins:
   youtube:
     enabled: true
-    allowSearch: true
-    allowDirectVideoIds: true
 
     clients:
       - MUSIC
       - WEB
       - WEBEMBEDDED
-      - ANDROID_TESTSUITE
+      - ANDROID
 
     oauth:
       enabled: false
