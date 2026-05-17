@@ -4,7 +4,7 @@ server:
 
 lavalink:
   plugins:
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.19.0"
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
       repository: "https://maven.lavalink.dev/releases"
 
   server:
@@ -27,9 +27,9 @@ plugins:
     allowDirectPlaylistIds: true
 
     clients:
-      - TV
-      - IOS
-      - ANDROID_VR
+      - MUSIC
+      - WEB
+      - WEBEMBEDDED
       - TVHTML5_SIMPLY
 
     oauth:
