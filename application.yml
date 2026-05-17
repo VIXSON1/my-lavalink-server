@@ -50,12 +50,12 @@ plugins:
     sources:
       spotify: true
       applemusic: false
-      deezer: true
+      deezer: false
       yandexmusic: false
 
     spotify:
-      clientId: "YOUR_CLIENT_ID"
-      clientSecret: "YOUR_CLIENT_SECRET"
+      clientId: "cfbeced2bbdd4e869bf8bd8eb785c799"
+      clientSecret: "60aca10739d843fdb935785a04bfcb60"
       countryCode: "US"
 
 metrics:
