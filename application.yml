@@ -14,8 +14,8 @@ lavalink:
       http: true
 
   plugins:
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.19.0-SNAPSHOT"
-      repository: "https://maven.lavalink.dev/snapshots"
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
+      repository: "https://maven.lavalink.dev/releases"
 
 plugins:
   youtube:
