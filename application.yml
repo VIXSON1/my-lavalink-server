@@ -1,9 +1,17 @@
 server:
   port: 2333
+  address: 0.0.0.0
 
 lavalink:
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
+      repository: "https://maven.lavalink.dev/releases"
+
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.0.1"
+      repository: "https://maven.lavalink.dev/releases"
+
   server:
-    password: "crystalmusic123"
+    password: "youshallnotpass"
 
     sources:
       youtube: false
@@ -12,14 +20,19 @@ lavalink:
       twitch: true
       vimeo: true
       http: true
+      local: false
 
-  plugins:
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
-      repository: "https://maven.lavalink.dev/releases"
+    bufferDurationMs: 400
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 10
+    resamplingQuality: HIGH
 
 plugins:
   youtube:
     enabled: true
+
+    allowSearch: true
+    allowDirectVideoIds: true
 
     clients:
       - MUSIC
@@ -29,5 +42,23 @@ plugins:
     oauth:
       enabled: false
 
-    allowSearch: true
-    allowDirectVideoIds: true
+  lavasrc:
+    providers:
+      - "ytsearch:\"%ISRC%\""
+      - "ytsearch:%QUERY%"
+
+    sources:
+      spotify: true
+      applemusic: true
+      deezer: true
+      yandexmusic: false
+
+    spotify:
+      clientId: "YOUR_CLIENT_ID"
+      clientSecret: "YOUR_CLIENT_SECRET"
+      countryCode: "US"
+
+metrics:
+  prometheus:
+    enabled: false
+    endpoint: /metrics
