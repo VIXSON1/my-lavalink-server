@@ -5,10 +5,7 @@ server:
 lavalink:
   plugins:
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
-      repository: "https://maven.lavalink.dev/releases"
-
-    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.0.1"
-      repository: "https://maven.lavalink.dev/releases"
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.8.2"
 
   server:
     password: "youshallnotpass"
@@ -22,43 +19,30 @@ lavalink:
       http: true
       local: false
 
-    bufferDurationMs: 400
-    frameBufferDurationMs: 5000
-    opusEncodingQuality: 10
-    resamplingQuality: HIGH
-
 plugins:
   youtube:
     enabled: true
-
     allowSearch: true
     allowDirectVideoIds: true
-
     clients:
       - MUSIC
-      - ANDROID_TESTSUITE
-      - TVHTML5EMBEDDED
-
-    oauth:
-      enabled: false
+      - WEB
+      - ANDROID_VR
+      - TVHTML5
 
   lavasrc:
     providers:
-      - "ytsearch:\"%ISRC%\""
       - "ytsearch:%QUERY%"
 
     sources:
       spotify: true
-      applemusic: false
+      apple: false
       deezer: false
-      yandexmusic: false
 
     spotify:
       clientId: "cfbeced2bbdd4e869bf8bd8eb785c799"
       clientSecret: "60aca10739d843fdb935785a04bfcb60"
-      countryCode: "US"
 
 metrics:
   prometheus:
     enabled: false
-    endpoint: /metrics
