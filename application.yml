@@ -30,7 +30,7 @@ plugins:
       - TVHTML5_SIMPLY
     oauth:
       enabled: true
-      refreshToken: "1//06GMbujeCWeocCgYIARAAGAYSNwF-L9IrUP-UaAOH_EucdVTyExZzsdnWLXhKEAanTMedYSbmc3qKAN3rdZWfiN3fYguPWLb7Ga4"
+    cipherServerUrl: "https://yt-cipher.kikkia.dev"
 
 logging:
   level:
