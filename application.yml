@@ -10,7 +10,7 @@ lavalink:
   server:
     password: "crystalmusic123"
     sources:
-      youtube: false # Important: the plugin handles this
+      youtube: false
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -25,20 +25,16 @@ plugins:
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
 
-    # Using the short names that correctly map to OAuth-compatible clients
     clients:
-      - TV           # Maps to TVHTML5 (OAuth compatible)
-      - ANDROID_VR   # Maps to ANDROID_VR (OAuth compatible)
-      - WEB          # For search and non-OAuth playback
-      - WEB_REMIX    # For YouTube Music search
+      - TV           # Maps to TVHTML5 (OAuth)
+      - ANDROID_VR   # Maps to ANDROID_VR (OAuth)
+      - WEB          # For standard searches
 
     oauth:
       enabled: true
-      # Your existing refresh token
       refreshToken: "1//05WTnyBUg67K5CgYIARAAGAUSNwF-L9IrzPoCXRZRF0-d9tozyAZZw52hCchHSSTYhqgF0k3wEkrInoKo97sfCrUgiwjmpPOV3_c"
 
-    # Some Railway environments work better without this line. 
-    # If it still fails, try deleting the line below.
+    # You can keep or remove this; if playback works, keep it.
     cipherServerUrl: "https://yt-cipher.kikkia.dev"
 
 logging:
