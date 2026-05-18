@@ -52,9 +52,10 @@ plugins:
     clients:
       - ANDROID_VR
       - WEB
-      - MUSIC
+      - WEB_REMIX
     oauth:
       enabled: true
+      refreshToken: "1//05ECC3-YRNr88CgYIARAAGAUSNwF-L9IrCoQtiTfsZy4o1hTaphH7tcar5KkbYbnmDHFOTSna0XDW3rO5QIZmfn5WPZUDkkdtiww"
 
   lavasrc:
     providers:
