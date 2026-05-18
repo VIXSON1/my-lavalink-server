@@ -52,7 +52,7 @@ plugins:
     clients:
       - ANDROID_VR
       - WEB
-      - WEB_REMIX
+      - TV_EMBEDDED
     oauth:
       enabled: true
       refreshToken: "1//05ECC3-YRNr88CgYIARAAGAUSNwF-L9IrCoQtiTfsZy4o1hTaphH7tcar5KkbYbnmDHFOTSna0XDW3rO5QIZmfn5WPZUDkkdtiww"
