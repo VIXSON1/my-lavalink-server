@@ -1,36 +1,44 @@
 server:
-port: 2333
-address: 0.0.0.0
+  port: 2333
+  address: 0.0.0.0
+
 lavalink:
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
+      repository: "https://maven.lavalink.dev/releases"
+
+  server:
+    password: "crystalmusic123"
+
+    sources:
+      youtube: false
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false
+
 plugins:
-- dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
-repository: "https://maven.lavalink.dev/releases"
-server:
-password: "crystalmusic123"
-sources:
-youtube: false
-bandcamp: true
-soundcloud: true
-twitch: true
-vimeo: true
-http: true
-local: false
-plugins:
-youtube:
-enabled: true
-allowSearch: true
-allowDirectVideoIds: true
-allowDirectPlaylistIds: true
-clients:
-- TV
-- IOS
-- ANDROID_VR
-- TVHTML5_SIMPLY
-oauth:
-enabled: true
-refreshToken: "1//05WTnyBUg67K5CgYIARAAGAUSNwF-L9IrzPoCXRZRF0-d9tozyAZZw52hCchHSSTYhqgF0k3wEkrInoKo97sfCrUgiwjmpPOV3_c"
-cipherServerUrl: "https://yt-cipher.kikkia.dev"
+  youtube:
+    enabled: true
+    allowSearch: true
+    allowDirectVideoIds: true
+    allowDirectPlaylistIds: true
+
+    clients:
+      - TV
+      - IOS
+      - ANDROID_VR
+      - TVHTML5_SIMPLY
+
+    oauth:
+      enabled: true
+      refreshToken: "1//05WTnyBUg67K5CgYIARAAGAUSNwF-L9IrzPoCXRZRF0-d9tozyAZZw52hCchHSSTYhqgF0k3wEkrInoKo97sfCrUgiwjmpPOV3_c"
+
+    cipherServerUrl: "https://yt-cipher.kikkia.dev"
+
 logging:
-level:
-root: INFO
-lavalink: INFO
+  level:
+    root: INFO
+    lavalink: INFO
