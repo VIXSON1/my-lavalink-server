@@ -5,10 +5,15 @@ server:
     enabled: false
 
 lavalink:
+  plugins:
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.8.0"
+      repository: "https://maven.lavalink.dev/releases"
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
+      repository: "https://maven.lavalink.dev/releases"
   server:
     password: 'mayxvikram'
     sources:
-      youtube: false
+      youtube: true
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -37,14 +42,6 @@ lavalink:
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
-
-pluginManager:
-  plugins:
-    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.8.0"
-      repository: "https://maven.lavalink.dev/releases"
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
-      repository: "https://maven.lavalink.dev/releases"
-  yamlConfigPropertiesPrefix: "plugins"
 
 plugins:
   youtube:
