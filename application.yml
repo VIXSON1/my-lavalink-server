@@ -57,13 +57,13 @@ plugins:
       - WEBEMBEDDED
     oauth:
       enabled: true
-      refreshToken: "1//05ECC3-YRNr88CgYIARAAGAUSNwF-L9IrCoQtiTfsZy4o1hTaphH7tcar5KkbYbnmDHFOTSna0XDW3rO5QIZmfn5WPZUDkkdtiww
+      refreshToken: '1//05ECC3-YRNr88CgYIARAAGAUSNwF-L9IrCoQtiTfsZy4o1hTaphH7tcar5KkbYbnmDHFOTSna0XDW3rO5QIZmfn5WPZUDkkdtiww'
 
   lavasrc:
     providers:
-      - ytsearch:%QUERY%
-      - ytmsearch:%QUERY%
-      - spsearch:%QUERY%
+      - 'ytsearch:%QUERY%'
+      - 'ytmsearch:%QUERY%'
+      - 'spsearch:%QUERY%'
     sources:
       spotify: true
       applemusic: false
@@ -89,5 +89,5 @@ metrics:
     enabled: false
 
 sentry:
-  dsn: ""
-  environment: ""
+  dsn: ''
+  environment: ''
