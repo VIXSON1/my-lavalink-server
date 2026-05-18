@@ -4,7 +4,8 @@ server:
 
 lavalink:
   plugins:
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
+    # Updated to 1.18.2 to fix the "sig function" error
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.2"
       repository: "https://maven.lavalink.dev/releases"
 
   server:
@@ -25,19 +26,18 @@ plugins:
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
 
-    # Using the most stable client combination
     clients:
-      - MUSIC        # Standard YouTube Music client
-      - TV           # OAuth compatible
-      - ANDROID_VR   # OAuth compatible
-      - MWEB         # Mobile Web client (often avoids "Login Required")
-      - WEB          # Desktop fallback
+      - MUSIC
+      - TV
+      - ANDROID_VR
+      - MWEB
+      - WEB
 
     oauth:
       enabled: true
       refreshToken: "1//05WTnyBUg67K5CgYIARAAGAUSNwF-L9IrzPoCXRZRF0-d9tozyAZZw52hCchHSSTYhqgF0k3wEkrInoKo97sfCrUgiwjmpPOV3_c"
 
-    # Re-enabled: This server helps decode the "sig function" when the local plugin fails
+    # Using the remote cipher server as an additional fallback
     cipherServerUrl: "https://yt-cipher.kikkia.dev"
 
 logging:
