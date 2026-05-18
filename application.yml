@@ -52,7 +52,6 @@ plugins:
     clients:
       - ANDROID_VR
       - WEB
-      - TVHTML5EMBEDDED
     oauth:
       enabled: false
 
