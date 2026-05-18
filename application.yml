@@ -5,6 +5,9 @@ server:
     enabled: true
 
 lavalink:
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
+      repository: "https://maven.lavalink.dev/releases"
   server:
     password: "crystalmusic123"
     sources:
@@ -58,16 +61,6 @@ plugins:
       visitorData: "CgtjcXY3aUtHOGEyayjbsavQBjIKCgJVUxIEGgAgWToMCAEgg43HmLebtoVqYt8CCtwCMTguWVQ9bk9US3AxUFhwTjhFbE1Ia3R4LUJtUm5NN3hhVktvd0c0bldsVmJxYWR0UV9jYm1lU1RiWk12bTdLM0RlemxUcy1uSDFQR0lERGoxT19XSFg1dTRtbm5WRDM1YV9STnRSUkE3a1RnNGRoUTNscFBfRExLeEw2VXdhbWg1Z3hUV05UbEtubE9NSi1DQTZkZ1J1enlEdkVpZnVkZjY0cXkwTi1BY1UxMGN6VEVSWXZLdnpVbXpXZDU4ZnVmN2dGaWkzNXMtZnVER2xQdXdpZ2VnOERfOW9seXBWQUh2QkFnV0pWWElJRmFNb0JvcTFzSDY5TnhSQmtzSmVnWElrSmVkZ012UzZqdndFcDdYT2tuQllFNTZ2a292ZXRMQUdic05QWVlfYk50RjZqUUtpV2paZW0td192cEc3RzB4S3dkU29mbEMzNjEtN3pVdkIwWjFNRDBMVjRR"
 
 logging:
-  file:
-    path: ./logs/Lavalink.log
   level:
     root: INFO
     lavalink: INFO
-
-  request:
-    enabled: true
-    includeClientInfo: true
-    includeHeaders: false
-    includeQueryString: true
-    includePayload: true
-    maxPayloadLength: 10000
