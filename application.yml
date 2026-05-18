@@ -6,14 +6,14 @@ server:
 
 lavalink:
   plugins:
-    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.8.0"
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.8.2"
       repository: "https://maven.lavalink.dev/releases"
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
       repository: "https://maven.lavalink.dev/releases"
   server:
     password: 'mayxvikram'
     sources:
-      youtube: true
+      youtube: false
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -51,9 +51,8 @@ plugins:
     allowDirectPlaylistIds: true
     clients:
       - ANDROID_VR
-      - WEB_REMIX
       - WEB
-      - WEB_EMBEDDED_PLAYER
+      - TVHTML5EMBEDDED
     oauth:
       enabled: false
 
