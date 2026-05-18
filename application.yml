@@ -52,8 +52,9 @@ plugins:
     clients:
       - ANDROID_VR
       - WEB
+      - MUSIC
     oauth:
-      enabled: false
+      enabled: true
 
   lavasrc:
     providers:
