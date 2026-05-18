@@ -26,16 +26,16 @@ plugins:
     allowDirectPlaylistIds: true
 
     clients:
-      - TV           # Maps to TVHTML5 (OAuth)
-      - ANDROID_VR   # Maps to ANDROID_VR (OAuth)
+      - MUSIC        # Added for better music track stability
+      - TV           # Maps to TVHTML5 (OAuth compatible)
+      - ANDROID_VR   # Maps to ANDROID_VR (OAuth compatible)
       - WEB          # For standard searches
 
     oauth:
       enabled: true
       refreshToken: "1//05WTnyBUg67K5CgYIARAAGAUSNwF-L9IrzPoCXRZRF0-d9tozyAZZw52hCchHSSTYhqgF0k3wEkrInoKo97sfCrUgiwjmpPOV3_c"
 
-    # You can keep or remove this; if playback works, keep it.
-    cipherServerUrl: "https://yt-cipher.kikkia.dev"
+    # Removed cipherServerUrl to use the plugin's internal decoder
 
 logging:
   level:
