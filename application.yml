@@ -1,48 +1,73 @@
 server:
   port: 2333
   address: 0.0.0.0
+  http2:
+    enabled: true
 
 lavalink:
-  plugins:
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
-      repository: "https://maven.lavalink.dev/releases"
-
   server:
     password: "crystalmusic123"
     sources:
-      youtube: false
+      youtube: false # Disable internal to use the improved plugin
       bandcamp: true
       soundcloud: true
       twitch: true
       vimeo: true
+      mixer: true
       http: true
       local: false
+    filters:
+      volume: true
+      equalizer: true
+      karaoke: true
+      timescale: true
+      tremolo: true
+      vibrato: true
+      distortion: true
+      rotation: true
+      channelMix: true
+      lowPass: true
+    bufferDurationMs: 400
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 10
+    resamplingQuality: LOW
+    trackStuckThresholdMs: 10000
+    useSeekGhosting: true
+    youtubePlaylistPageLimit: 6
+    playerUpdateInterval: 5
+    youtubeSearchEnabled: true
+    soundcloudSearchEnabled: true
+    gc-warnings: true
 
 plugins:
   youtube:
     enabled: true
-    allowSearch: true
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
-
-    # Fixed: Using correct short names for version 1.18.1
     clients:
-      - TV           # Correct name for TVHTML5
-      - ANDROID_VR   # Correct name
-      - MUSIC        # Correct name for YouTube Music
-      - WEB          # Desktop client
-      - MWEB         # Mobile client
-
+      - TV
+      - ANDROID_VR
+      - MUSIC
+      - WEB
+      - MWEB
     oauth:
       enabled: true
       refreshToken: "1//05WTnyBUg67K5CgYIARAAGAUSNwF-L9IrzPoCXRZRF0-d9tozyAZZw52hCchHSSTYhqgF0k3wEkrInoKo97sfCrUgiwjmpPOV3_c"
-
-    # Proof of Origin Tokens
     pot:
       token: "CgtmS2Z3Y1V6S2I0byiYy6vQBjIKCgJVUxIEGgAgOBoMCAEglv_BmLebtoVqYt8CCtwCMTguWVQ9T09ZYXRJWkNkQWhtM1oxVmpWd2xSWHNodE1fQWlpb0Z2Wkdmb09vbmpUYkRoa3dyaWE5ZzFQQ01BNzV5aXFqaE41Q1I4NGxxN2dJR3lxYWlnYmFqbDhhRUtkWThscm5tN0tycFFfTkExR1VEN3B3cl9ydlFBczczaW1tOWRRemJMalZNWW1tQm1ZbTh6VHFiOVNVdTZLdVh6QjhvVjQwc2UzcHVmS1NUb2VDdUNjbDMzQ0ltdTFmQmk0bUtVcUE1MjBWc1htUGE2b2txWDZnX21WQm9FSVdITmVIdXd5UDBUZEdwa2ZTNW5KeXc0WUh3Yk1lWjVtaUdFZ0xVRmwwUS1hV2Myd2FHQU51LTlfc1N2MUtCSExBRzI2UUtiWGR2ejZFa0VwQmlZbTJYRVoxQV9FSUFhdVFnWXpVV3N1UkFsdlJsczJwYk9kNFhCWDVTN0QydkFB"
       visitorData: "CgtjcXY3aUtHOGEyayjbsavQBjIKCgJVUxIEGgAgWToMCAEgg43HmLebtoVqYt8CCtwCMTguWVQ9bk9US3AxUFhwTjhFbE1Ia3R4LUJtUm5NN3hhVktvd0c0bldsVmJxYWR0UV9jYm1lU1RiWk12bTdLM0RlemxUcy1uSDFQR0lERGoxT19XSFg1dTRtbm5WRDM1YV9STnRSUkE3a1RnNGRoUTNscFBfRExLeEw2VXdhbWg1Z3hUV05UbEtubE9NSi1DQTZkZ1J1enlEdkVpZnVkZjY0cXkwTi1BY1UxMGN6VEVSWXZLdnpVbXpXZDU4ZnVmN2dGaWkzNXMtZnVER2xQdXdpZ2VnOERfOW9seXBWQUh2QkFnV0pWWElJRmFNb0JvcTFzSDY5TnhSQmtzSmVnWElrSmVkZ012UzZqdndFcDdYT2tuQllFNTZ2a292ZXRMQUdic05QWVlfYk50RjZqUUtpV2paZW0td192cEc3RzB4S3dkU29mbEMzNjEtN3pVdkIwWjFNRDBMVjRR"
 
 logging:
+  file:
+    path: ./logs/Lavalink.log
   level:
     root: INFO
     lavalink: INFO
+
+  request:
+    enabled: true
+    includeClientInfo: true
+    includeHeaders: false
+    includeQueryString: true
+    includePayload: true
+    maxPayloadLength: 10000
