@@ -9,9 +9,8 @@ lavalink:
 
   server:
     password: "crystalmusic123"
-
     sources:
-      youtube: false
+      youtube: false # Set to false because the plugin handles it
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -26,16 +25,19 @@ plugins:
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
 
+    # Fixed: Using OAuth-compatible clients and removed invalid ones
     clients:
-      - MUSIC
-      - ANDROID_TESTSUITE
+      - TVHTML5
+      - ANDROID
+      - IOS
       - WEB
-      - TVHTML5_SIMPLY
 
     oauth:
       enabled: true
+      # Your existing refresh token
       refreshToken: "1//05WTnyBUg67K5CgYIARAAGAUSNwF-L9IrzPoCXRZRF0-d9tozyAZZw52hCchHSSTYhqgF0k3wEkrInoKo97sfCrUgiwjmpPOV3_c"
 
+    # Optional: If playback still fails, you can try commenting this out
     cipherServerUrl: "https://yt-cipher.kikkia.dev"
 
 logging:
