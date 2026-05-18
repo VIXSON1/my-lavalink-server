@@ -4,8 +4,8 @@ server:
 
 lavalink:
   plugins:
-    # Updated to 1.18.2 to fix the "sig function" error
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.2"
+    # Reverted to 1.18.1 as it is the latest available version
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
       repository: "https://maven.lavalink.dev/releases"
 
   server:
@@ -37,7 +37,7 @@ plugins:
       enabled: true
       refreshToken: "1//05WTnyBUg67K5CgYIARAAGAUSNwF-L9IrzPoCXRZRF0-d9tozyAZZw52hCchHSSTYhqgF0k3wEkrInoKo97sfCrUgiwjmpPOV3_c"
 
-    # Using the remote cipher server as an additional fallback
+    # This is crucial for fixing the "sig function" error on version 1.18.1
     cipherServerUrl: "https://yt-cipher.kikkia.dev"
 
 logging:
