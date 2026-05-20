@@ -13,7 +13,7 @@ lavalink:
   server:
     password: 'mayxvikram'
     sources:
-      youtube: false
+      youtube: false # Plugin handles this
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -45,8 +45,18 @@ lavalink:
 
 plugins:
   youtube:
+    enabled: true
+    allowSearch: true
+    allowDirectVideoIds: true
+    allowDirectPlaylistIds: true
+    clients:
+      - ANDROID_MUSIC
+      - MUSIC
+      - WEB
+      - TVHTML5EMBEDDED
     oauth:
       enabled: true
+    # Jab aapko PO Token mil jaye, toh yahan niche 'pot' section bhi add kar sakte hain
 
   lavasrc:
     providers:
@@ -55,8 +65,8 @@ plugins:
       - 'spsearch:%QUERY%'
     sources:
       spotify: true
-      applemusic: false
-      deezer: false
+      applemusic: true
+      deezer: true
       yandexmusic: false
       flowerytts: false
     spotify:
